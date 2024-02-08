@@ -83,6 +83,7 @@ func (q *Queries) ListAccounts(ctx context.Context, arg ListAccountsParams) ([]A
 	if err != nil {
 		return nil, err
 	}
+	
 	defer rows.Close()
 	var items []Account
 	for rows.Next() {
